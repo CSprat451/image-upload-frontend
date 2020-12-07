@@ -8,9 +8,9 @@ Using React, I made a simple image upload frontend that connects with my backend
 
 ## Prerequisites
 
--Visual Studio Code - IDE
--React app
--Axios - Used to talk with the server (instead of fetch())
+- Visual Studio Code - IDE
+- React app
+- Axios - Used to talk with the server (instead of fetch())
 
 ## How to run it (on Windows)
 

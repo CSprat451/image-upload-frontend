@@ -1,25 +1,19 @@
-import logo from './logo.svg';
+import React from 'react'
+import FileUpload from './components/FileUpload'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App = () => (
+    <div className="container mt-4">
+      <h4 className="display-4 text-center mb-5">
+      Welcome to my Ascii Art Project!
+      </h4>
+      <h3 className="display-5 text-center mb-5">Start by uploading an image</h3>
+
+      <FileUpload />
+
     </div>
+    
   );
-}
+
 
 export default App;

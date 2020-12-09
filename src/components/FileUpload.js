@@ -1,7 +1,7 @@
-import React, { Fragment, useState } from 'react';
-import Message from './Message';
-import Progress from './Progress';
-import axios from 'axios';
+import React, { Fragment, useState } from 'react'
+import Message from './Message'
+import Progress from './Progress'
+import axios from 'axios'
 
 const FileUpload = () => {
     const [file, setFile] = useState('');
@@ -9,13 +9,15 @@ const FileUpload = () => {
     const [uploadedFile, setUploadedFile] = useState({});
     const [message, setMessage] = useState('');
     const [uploadPercentage, setUploadPercentage] = useState(0);
+    const [returnedFile, setReturnedFile] = useState('');
     
     const onChange = e => {
         setFile(e.target.files[0]);
         setFilename(e.target.files[0].name);
+        setReturnedFile('')
     }
 
-    //'file' is from backend
+
     const onSubmit = async e => {
         e.preventDefault();
         const formData = new FormData();
@@ -39,9 +41,7 @@ const FileUpload = () => {
 
             });
 
-            const { fileName, filePath } = res.data;
-
-            setUploadedFile({ fileName, filePath });
+            setReturnedFile("http://localhost:5000/ascii/" + res.data);
 
             setMessage('File Uploaded');
 
@@ -84,22 +84,25 @@ const FileUpload = () => {
                 />
                 
             </form>
-
+            
             <div className='preview'>
                 <img 
                     src={file? URL.createObjectURL(file) : null}
-                    class='rounded mx-auto d-block mt-4' 
+                    className='rounded mx-auto d-block mt-4' 
                     alt={file? file.name : null} 
                     height='600px' 
                     width='800px'
                 />
             </div>
 
-            { uploadedFile ? <div className='row mt-5'>
-                <div className="col-md-6 m-auto">
-                    <h3 className="text-center">{ uploadedFile.fileName }</h3>
-                    <img style={{ width: '100%' }} src={uploadedFile.filePath} alt='' />
-                </div>
+            { returnedFile ? <div className='preview'>
+                <img 
+                    src={returnedFile? returnedFile : null}
+                    className='rounded mx-auto d-block mt-4' 
+                    alt={returnedFile? returnedFile : null} 
+                    height='600px' 
+                    width='800px'
+                />
             </div> : null }
         </Fragment>
     )

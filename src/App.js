@@ -7,7 +7,7 @@ const App = () => (
       <h4 className="display-4 text-center mb-5">
       Welcome to my Ascii Art Project!
       </h4>
-      <h3 className="display-5 text-center mb-5">Start by uploading an image</h3>
+      <h3 className="display-5 text-center mb-5">Start by uploading an image or video file</h3>
 
       <FileUpload />
 

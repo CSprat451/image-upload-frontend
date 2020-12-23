@@ -6,7 +6,6 @@ import axios from 'axios'
 const FileUpload = () => {
     const [file, setFile] = useState('');
     const [filename, setFilename] = useState('Choose File');
-    const [uploadedFile, setUploadedFile] = useState({});
     const [message, setMessage] = useState('');
     const [uploadPercentage, setUploadPercentage] = useState(0);
     const [returnedFile, setReturnedFile] = useState('');
@@ -41,7 +40,7 @@ const FileUpload = () => {
 
             });
 
-            setReturnedFile("http://localhost:5000/ascii/" + res.data);
+            setReturnedFile(res.data);
 
             setMessage('File Uploaded');
 
@@ -63,7 +62,7 @@ const FileUpload = () => {
                 <div className="custom-file mb-4">
                     <input 
                         type="file" 
-                        accept=".jpg, .png, .jpeg"
+                        accept=".jpg, .png, .jpeg, .mp4"
                         maxfilesize={524288}
                         className="custom-file-input" 
                         id="customFile" 

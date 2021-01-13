@@ -2,9 +2,9 @@
 
 ### Overview
 
-This image upload frontend is part two of my Ascii Art Project.
+This image upload frontend is the frontend of my Ascii Art Project.
 
-Using React, I made a simple image upload frontend that connects with my backend server. The image is processed by the server and returns the uploaded image as an ascii art image.
+Using React, I made a simple image/video upload frontend that connects with my python backend server. The image is processed by the server and returns the uploaded image as an ascii art image. The video is processed by the server and returns an ascii art gif.
 
 ## Prerequisites
 
@@ -31,4 +31,14 @@ A new tab in your browser should automatically open with the image upload front 
 
 ### Connect to backend server
 
-If you want to connect it to part one of my ascii art project, the github link is here: https://github.com/CSprat451/AsciiArt
+If you want to connect it to the python backend of my ascii art project, the github link is here: https://github.com/CSprat451/AsciiArt
+
+## Status
+
+This is a work in progress. I will periodically update the code to add new features or functionality.
+
+Recently added: Upload a video that will be returned as an ascii gif.
+
+## Inspiration
+
+This front end design was inspired by the React File Uploader With Express (Using React Hooks) by Traversy Media YouTube tutorial.

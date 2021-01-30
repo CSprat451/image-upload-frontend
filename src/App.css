@@ -10,3 +10,22 @@
 .btn:hover {
     background: darkblue;
 }
+
+.image-container {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.image-preview {
+    position: relative;
+    display: inline-block;
+    margin-top: 25px;
+    background-image: url("./assets/image-icon.png");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ascii-preview {
+    margin-top: 15px;
+}

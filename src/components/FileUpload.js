@@ -84,25 +84,25 @@ const FileUpload = () => {
                 
             </form>
             
-            <div className='preview'>
-                <img 
-                    src={file? URL.createObjectURL(file) : null}
-                    className='rounded mx-auto d-block mt-4' 
-                    alt={file? file.name : null} 
-                    height='600px' 
-                    width='800px'
-                />
-            </div>
+            <div className="image-container">
+                <div className='image-preview'>
+                    <img 
+                        src={file? URL.createObjectURL(file) : null}
+                        alt={file? file.name : null} 
+                        height='300px' 
+                        width='400px'
+                    />
+                </div>
 
-            { returnedFile ? <div className='preview'>
-                <img 
-                    src={returnedFile? returnedFile : null}
-                    className='rounded mx-auto d-block mt-4' 
-                    alt={returnedFile? returnedFile : null} 
-                    height='600px' 
-                    width='800px'
-                />
-            </div> : null }
+                { returnedFile ? <div className='ascii-preview'>
+                    <img 
+                        src={returnedFile? returnedFile : null}
+                        alt={returnedFile? returnedFile : null} 
+                        height='600px' 
+                        width='800px'
+                    />
+                </div> : null }
+            </div>
         </Fragment>
     )
 }

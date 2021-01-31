@@ -27,6 +27,7 @@ const FileUpload = () => {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 },
+                // Progress bar percentage
                 onUploadProgress: progressEvent => {
                     setUploadPercentage(
                         parseInt(
@@ -46,11 +47,7 @@ const FileUpload = () => {
 
             setFilename('Choose File')
         } catch(error) {
-            // if(error.response.status === 500) {
-            //     setMessage('There was a problem with the server')
-            // } else {
-            //     setMessage(error.response.data.msg); // msg comes from server side
-            // }
+            // TO DO: Add error messages.
             console.log(error)
         }
     };
@@ -74,6 +71,7 @@ const FileUpload = () => {
                     </label>
                 </div>
 
+                {/* Progress Bar */}
                 <Progress percentage={uploadPercentage} />
 
                 <input 
@@ -84,6 +82,7 @@ const FileUpload = () => {
                 
             </form>
             
+            {/* Uploaded image preview */}
             <div className="image-container">
                 <div className='image-preview'>
                     <img 
@@ -94,6 +93,7 @@ const FileUpload = () => {
                     />
                 </div>
 
+                {/* Ascii image preview */}
                 { returnedFile ? <div className='ascii-preview'>
                     <img 
                         src={returnedFile? returnedFile : null}

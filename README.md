@@ -37,8 +37,6 @@ If you want to connect it to the python backend of my ascii art project, the git
 
 This is a work in progress. I will periodically update the code to add new features or functionality.
 
-Recently added: Upload a video that will be returned as an ascii gif.
-
 ## Inspiration
 
 This front end design was inspired by the React File Uploader With Express (Using React Hooks) by Traversy Media YouTube tutorial.

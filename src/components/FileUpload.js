@@ -74,6 +74,7 @@ const FileUpload = () => {
                 {/* Progress Bar */}
                 <Progress percentage={uploadPercentage} />
 
+                {/* Submit button */}
                 <input 
                     type='submit' 
                     value="Submit" 

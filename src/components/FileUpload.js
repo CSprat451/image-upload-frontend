@@ -23,7 +23,7 @@ const FileUpload = () => {
         formData.append('file', file)
 
         try {
-            const res = await axios.post('http://localhost:5000/ascii', formData, {
+            const res = await axios.post('http://asciiartapplication-env.eba-i68dakre.us-east-1.elasticbeanstalk.com//ascii', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 },
